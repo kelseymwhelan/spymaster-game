@@ -14,7 +14,7 @@ function App() {
 
   const startGame = async () => {
     try {
-      const response = await fetch('/wordlist-eng.txt');
+      const response = await fetch('/spymaster-game/wordlist-eng.txt');
       const text = await response.text();
       const wordList = text.split('\n').filter(word => word.trim());
       const selectedWords = getRandomWords(wordList, 25);
